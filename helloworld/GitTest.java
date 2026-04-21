@@ -1,7 +1,8 @@
 package helloworld;
 
-public class GitTest {String[] args) throws Exception{
-    System.out.println("コミットからプッシュまでを行おう！"))
+public class GitTest{
+    public static void main(String[] args){
+        System.out.println("コミットからプッシュまでを行おう！");
+    }
 }
-    
-}
+
