@@ -3,6 +3,7 @@ package com.example.todo.controller;
 import com.example.todo.model.Task;
 import com.example.todo.repository.TaskRepository;
 import org.springframework.beans.factory.annotation.Autowired;
+import org.springframework.http.HttpStatus;
 import org.springframework.web.bind.annotation.*;
 
 import java.util.List;
@@ -38,7 +39,8 @@ public class TaskController {
 
     // 削除
     @DeleteMapping("/{id}")
+    @ResponseStatus(HttpStatus.NO_CONTENT) // ここで 204 を指定
     public void deleteTask(@PathVariable Long id) {
         taskRepository.deleteById(id);
-    }
+}
 }
